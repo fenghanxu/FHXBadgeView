@@ -1,0 +1,6 @@
+framework module FHXBageView {
+  umbrella header "FHXBageView-umbrella.h"
+
+  export *
+  module * { export * }
+}

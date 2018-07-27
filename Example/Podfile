@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FHXBageView_Example' do
+  pod 'FHXBageView', :path => '../'
+
+  target 'FHXBageView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

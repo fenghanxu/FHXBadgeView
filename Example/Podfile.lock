@@ -1,0 +1,16 @@
+PODS:
+  - FHXBageView (0.1.0)
+
+DEPENDENCIES:
+  - FHXBageView (from `../`)
+
+EXTERNAL SOURCES:
+  FHXBageView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FHXBageView: 73e6dbcd9fdd2428f45fcb468ac7a15f11bd1318
+
+PODFILE CHECKSUM: 128bc792f51eecb97843cf4838c036101ce16d3c
+
+COCOAPODS: 1.4.0
