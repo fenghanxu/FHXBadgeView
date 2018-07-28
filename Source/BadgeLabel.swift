@@ -91,7 +91,8 @@ open class BadgeLabel: UILabel {
       }else{
         guard let result = self.text?.int?.digits else { return }
         if result > Int(limit) {
-          self.text = self.text!.substringInclude(front: Int(limit)) + "+"
+//          self.text = "99999999999".substringInclude(front: Int(limit)) + "+"
+          self.text = getMaxValue(number: Int(limit), needValue: "9") + "+"
           self.p_width = limit*9.5 + 18 + 9.5
         }else{
           self.p_width = stringWidth + 18
@@ -129,6 +130,16 @@ open class BadgeLabel: UILabel {
     let size = CGSize(width: CGFloat(Double.greatestFiniteMagnitude), height: height)
     let rect = ceil((string as NSString).boundingRect(with: size, options: option, attributes: attributes, context: nil).width)
     return rect
+  }
+  
+  func getMaxValue(number:Int, needValue value:String) -> String {
+    if number <= 0 { return String() }
+    var result = String()
+    for _ in 1...number {
+      result += value
+    }
+    print("result = \(result)")
+    return result
   }
 
 }

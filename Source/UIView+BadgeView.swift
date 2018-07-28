@@ -35,7 +35,9 @@ public extension PP where Base: UIView {
     if self.base.badgeLabel.limit == 0 || self.base.badgeLabel.limit >= CGFloat((text.int ?? 0).digits){
       self.base.badgeLabel.text = text
     }else {
-      self.base.badgeLabel.text = text.substringInclude(front: Int(self.base.badgeLabel.limit)) + "+"
+//      self.base.badgeLabel.text = "9999999999999".substringInclude(front: Int(self.base.badgeLabel.limit)) + "+"
+      
+      self.base.badgeLabel.text = getMaxValue(number: Int(self.base.badgeLabel.limit), needValue: "9") + "+"
     }
   }
   
@@ -170,6 +172,15 @@ public extension PP where Base: UIView {
   
   public func addLimit(number:CGFloat) {
     self.base.badgeLabel.limit = number
+  }
+  
+  func getMaxValue(number:Int, needValue value:String) -> String {
+    if number <= 0 { return String() }
+    var result = String()
+    for _ in 1...number {
+      result += value
+    }
+    return result
   }
   
 }

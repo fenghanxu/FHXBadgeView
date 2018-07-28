@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         buildView()
 
         setupViews()
@@ -34,8 +35,8 @@ class ViewController: UIViewController {
   
     fileprivate func buildView(){
       let bageView = UIView()
-      bageView.pp.addBadge(number: 99999)
-      bageView.pp.addLimit(number: 2)
+      bageView.pp.addBadge(number: 11111)
+      bageView.pp.addLimit(number: 6)
       bageView.pp.moveBadge(x: 1, y: 1 )
       bageView.pp.setBadgeLabel { (bageLabel) in
         bageLabel.textColor = UIColor.blue
@@ -57,7 +58,7 @@ class ViewController: UIViewController {
     
     // 1.2 右边
     btn_01.pp.addBadge(number: 99999)
-    btn_01.pp.addLimit(number: 2)
+    btn_01.pp.addLimit(number: 3)
     btn_01.pp.setBadge(height: 15)
     btn_01.pp.moveBadge(x: -5, y: 0)
     btn_01.pp.setBadge(flexMode: .middle)
@@ -84,6 +85,12 @@ class ViewController: UIViewController {
   func addNum() {
     self.navigationItem.leftBarButtonItem?.pp.increase()
   }
+  
+  func returnNDigitNine_0(number:Int) -> String {
+    return String(10^(number)-1)
+  }
+  
+
 
   
 
