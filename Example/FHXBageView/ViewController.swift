@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
       
         buildView()
 
@@ -35,10 +36,10 @@ class ViewController: UIViewController {
   
     fileprivate func buildView(){
       let bageView = UIView()
-      bageView.pp.addBadge(number: 11111)
-      bageView.pp.addLimit(number: 6)
-      bageView.pp.moveBadge(x: 1, y: 1 )
-      bageView.pp.setBadgeLabel { (bageLabel) in
+      bageView.fhx.addBadge(number: 11111)
+      bageView.fhx.addLimit(number: 6)
+      bageView.fhx.moveBadge(x: 1, y: 1 )
+      bageView.fhx.setBadgeLabel { (bageLabel) in
         bageLabel.textColor = UIColor.blue
         bageLabel.font = UIFont.systemFont(ofSize: 13)
       }
@@ -49,19 +50,19 @@ class ViewController: UIViewController {
   
   func setupBadges() {
     // 1.1 左边
-    btn_02.pp.addBadge(number: 1)
-    btn_02.pp.moveBadge(x: -7, y: 5)
-    btn_02.pp.setBadgeLabel { (badgeLabel) in
+    btn_02.fhx.addBadge(number: 1)
+    btn_02.fhx.moveBadge(x: -7, y: 5)
+    btn_02.fhx.setBadgeLabel { (badgeLabel) in
       badgeLabel.font = UIFont.systemFont(ofSize: 13)
       badgeLabel.textColor = UIColor.blue
     }
     
     // 1.2 右边
-    btn_01.pp.addBadge(number: 99999)
-    btn_01.pp.addLimit(number: 3)
-    btn_01.pp.setBadge(height: 15)
-    btn_01.pp.moveBadge(x: -5, y: 0)
-    btn_01.pp.setBadge(flexMode: .middle)
+    btn_01.fhx.addBadge(number: 99999)
+    btn_01.fhx.addLimit(number: 3)
+    btn_01.fhx.setBadge(height: 15)
+    btn_01.fhx.moveBadge(x: -5, y: 0)
+    btn_01.fhx.setBadge(flexMode: .middle)
   }
   
   func setupViews() {
@@ -76,14 +77,14 @@ class ViewController: UIViewController {
   }
   
   @objc func deleteNum_0() {
-    self.navigationItem.leftBarButtonItem?.pp.decrease()
+    self.navigationItem.leftBarButtonItem?.fhx.decrease()
   }
   @objc func deleteNum_1() {
-    self.navigationItem.leftBarButtonItem?.pp.decrease()
+    self.navigationItem.leftBarButtonItem?.fhx.decrease()
   }
   @objc
   func addNum() {
-    self.navigationItem.leftBarButtonItem?.pp.increase()
+    self.navigationItem.leftBarButtonItem?.fhx.increase()
   }
   
   func returnNDigitNine_0(number:Int) -> String {

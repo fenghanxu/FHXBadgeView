@@ -37,16 +37,16 @@ extension FHXTabBarViewController {
   //可以把所有控制器在里面写成一个方法，这样外面条用tabBar就变得简介，但是封装性没有那么高。为了提高FHXTabBarViewController的封装性，把这只控制器的方法在AppDelegate里面去设置。
       func addChildViewControllers() {
         let avc = ViewController()
-        avc.tabBarItem.pp.addBadge(number: 99)
+        avc.tabBarItem.fhx.addBadge(number: 99)
         setChildVC(vc: avc, name: "菜谱", image: "dinner", selectImage: "dinner-1")
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01, execute: {
             
-            avc.tabBarItem.pp.addBadge(number: 99999)
-            avc.tabBarItem.pp.addLimit(number: 1)
-            avc.tabBarItem.pp.setBadge(height: 15)
-            avc.tabBarItem.pp.moveBadge(x: -5, y: 0)
-            avc.tabBarItem.pp.setBadge(flexMode: .middle)
+            avc.tabBarItem.fhx.addBadge(number: 99999)
+            avc.tabBarItem.fhx.addLimit(number: 1)
+            avc.tabBarItem.fhx.setBadge(height: 15)
+            avc.tabBarItem.fhx.moveBadge(x: -5, y: 0)
+            avc.tabBarItem.fhx.setBadge(flexMode: .middle)
             
         })
         
